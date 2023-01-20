@@ -1,0 +1,40 @@
+{
+  "users": [
+    {
+      "email": "admin@naver.com",
+      "password": "$2a$10$g2LEJZeeyiU1N52hif/zOeNeaF.WYNWdcfAfJyi.rcZ6m0IQS3xj6",
+      "name": "admin",
+      "id": 1
+    },
+    {
+      "email": "lee@naver.com",
+      "password": "$2a$10$V7ZvfVbzX/ZdptvOaeoEi..Zmf7fNEXCNHWtcJGVqkY6WPbWYUxvC",
+      "name": "lee",
+      "id": 2
+    },
+    {
+      "email": "kim@naver.com",
+      "password": "$2a$10$P2Ke3E4/rf9o9e24Pu71D.So4DctuhIztdUSMnGCIRVRxtPjLcUDK",
+      "name": "kim",
+      "id": 3
+    },
+    {
+      "email": "choi@naver.com",
+      "password": "$2a$10$D5ipHM2AdrkNM8NCizAgmehz40dByMyzdfk0KFKyzvVfyPaPRcV9O",
+      "name": "choi",
+      "id": 4
+    },
+    {
+      "email": "han@naver.com",
+      "password": "$2a$10$.ANXBqQqaJB5tn8Lo7IVYeYOBA3ZMh6TPzjioXMoSYv2uGh2ww6Iy",
+      "name": "han",
+      "id": 5
+    },
+    {
+      "email": "goo@naver.com",
+      "password": "$2a$10$s29oJCRr004cbHOjVZBtluD/H6sWaLnB6fQAhOLbhqhujaNd82Kvi",
+      "name": "goo",
+      "id": 6
+    }
+  ]
+}

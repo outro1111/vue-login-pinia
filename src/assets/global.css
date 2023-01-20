@@ -1,0 +1,103 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+/* @import url(https://fonts.bunny.net/css?family=noto-sans-kr:100,300,400,500,700,900|open-sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i); */
+html, body, div, span, a, form, input, select, button, textarea, legend, fieldset, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, blockquote, address, p, th, td, caption {margin:0;padding:0;line-height:1.6;box-sizing:border-box;font-family: 'Open Sans', 'Noto Sans KR', sans-serif;;font-size:16px;font-weight:400;color:#333;font-style:normal;}
+input, select, textarea {height:44px;padding:10px 12px;border:1px solid rgba( 255, 255, 255, 0.3)}
+input::placeholder {color:rgba(255, 255, 255, 0.6);font-weight:200}
+input:focus {background:rgba(255, 255, 255, 0.2)}
+select option {color:#333}
+textarea {height:auto}
+ol, ul, li {list-style:none;}
+a:link, a:visited {text-decoration:none}
+a:hover, a:active {text-decoration:none}
+
+:root {
+  --ease1: cubic-bezier(.246,.75,.187,1);
+  --ease2: cubic-bezier(.19,1,.22,1);
+  --ease3: cubic-bezier(1,.2,.2,1);
+  --gradient-color1: linear-gradient(315deg,#42d392 25%,#647eff);
+  --gradient-color2: radial-gradient(circle farthest-corner at 0 0,#dd5183 36%,#ba75e0 50%,#5cb6f8 71%,#cfebff);
+  --gradient-color3: radial-gradient(circle farthest-side at 0 0,#cfebff 8%,#5cb6f8 38%,#ba75e0 73%,#e46793);
+  --gradient-color4: radial-gradient(circle farthest-corner at 100% 0,#ffaccf 28%,#5cb6f8 51%,#ba75e0 87%,#dd5183 96%);
+  --gradient-color5: linear-gradient(150deg,#281483 15%,#8f6ed5 70%,#d782d9 94%);
+  --font-white: rgba( 255, 255, 255, 0.8);
+}
+
+html {position:relative;width:100%;height:100%;overflow-y:scroll}
+#wrap {max-width:1200px;margin:0 auto;padding:0 20px}
+#content {position:relative;width:1000px;min-height:500px;;padding:50px 30px;margin:0 auto;}
+
+#header {display:flex;justify-content:space-between;min-width:1000px;padding:10px 30px;align-items:center;background:var(--gradient-color5)}
+#header h1 {width:300px;}
+#header h1 a {font-size:28px;font-weight:800;color:#58e4a5;}
+#header nav {display:flex}
+#header nav a {padding:0 15px;color:#fff;font-size:16px}
+#header nav a.router-link-active {color:#58e4a5;font-weight:800}
+#header .utils {width:300px;text-align:right}
+#header .utils .btnSignup, #header .utils .userinfo {color:#fff;padding:5px 10px;margin-right:10px;}
+#header .utils .btnLogin, #header .utils .btnLogout {color:#fff;border:1px solid rgba( 255, 255, 0255, 0.7);padding:5px 12px;background:none;transition:background-color .5s ease;line-height:normal;cursor:pointer}
+#header .utils .btnLogin:hover, #header .utils .btnLogout:hover {background:rgba( 255, 255, 255, 0.2);}
+
+.home {text-align:center}
+.home h1 {display:inline-block;font-size:80px;font-weight:900;background:var(--gradient-color4);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.home p {width:500px;margin:0 auto}
+.home .visual img {width:46%;margin-top:-20px;transform:rotate(16deg);}
+
+.about h1, .brand h1, .member h1 {font-size:44px;font-weight:900;text-align:center;margin:20px 0;line-height:1.2}
+
+.login {width:380px;margin:0 auto}
+.login h1 {font-size:44px;font-weight:900;text-align:center;margin:20px 0;line-height:1.2}
+.login p {position:relative;height:50px;margin-bottom:15px}
+.login p.error {position:relative;height:auto;margin:0;font-size:14px;color:#ff003e;margin:-5px 0 10px}
+.login input {box-sizing:border-box;padding:10px 0 0;width:100%;height:100%;border:0 none;color:#222;outline:none;}
+.login label {position:absolute;left:0%;bottom:0;width:100%;height:100%;border-bottom:1px solid #bbb;text-align:left;pointer-events:none; }
+.login label:after {content:"";position:absolute;left:0;bottom:-1px;width:100%;height:100%;border-bottom:2px solid #1867c0;transition:all .3s ease;transform:scaleX(0);}
+.login .invalid label:after {border-bottom:2px solid #ff003e;transform:scaleX(1)}
+.login label span {position:absolute;left:0;bottom:5px;color:#666;transition:all .3s ease;transform-origin:top left;}
+.login input:focus + label span {transform:translateY(-100%) scale(.8);font-size:14px;color:#1867c0;}
+.login input:focus + label::after {transform: scaleX(1);} 
+.login input:not(:placeholder-shown):not(:focus) + label span {transform:translateY(-100%) scale(.8);font-size:14px; color:#666;}
+.login input::placeholder {color:rgba( 255, 255, 255, 0)}
+.login button {width:100%;color:#fff;border:0 none;padding:12px 0;margin-top:15px;background:#647eff;cursor: pointer;transition:background-color .5s ease}
+.login button:hover {background:#5cb6f8;}
+.login .loginInfo {text-align:center;}
+.login .alert {display:flex;padding:10px;border-radius:4px;background:#fb8c00;color:#fff;font-size:14px;line-height:1.4}
+.login .alert .icon {color:#fff;margin-right:10px}
+.login .alert .icon svg {width:24px;height:24px;fill:currentColor;}
+.login .success {text-align:center;font-size:24px;height:auto;margin:20px 0;}
+.login .success span {display:block;color:#31a5fa;font-size:24px;font-weight:bold;}
+
+.member ul {width:660px;margin:50px auto 0;border-top:1px solid rgba( 0, 0, 0, 0.1)}
+.member li {display:flex;justify-content:space-between;padding:12px;border-bottom:1px solid rgba( 0, 0, 0, 0.1)}
+.member li:nth-child(odd) {background:rgba( 0, 0, 0, 0.03)}
+.member li.header {background:rgb(100, 126, 255, 0.08)}
+.member li span {text-align:center}
+.member li span:nth-child(1n) {width:20%}
+.member li span:nth-child(3n) {width:15%}
+.member li .delete {width:5%;text-align:center}
+.member li .delete button {display:inline-block;width:20px;height:20px;padding:0;background:linear-gradient(-45deg, transparent 0%, transparent 48%, gray 46%,  gray 54%,transparent 54%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 48%, gray 46%,  gray 54%,transparent 54%, transparent 100%);border:0 none;border-radius:100%;cursor:pointer;opacity:.6;vertical-align:middle}
+.member li .delete button:hover {opacity:1;background:linear-gradient(-45deg, transparent 0%, transparent 48%, #647eff 46%,  #647eff 54%,transparent 54%, transparent 100%), linear-gradient(45deg, transparent 0%, transparent 48%, #647eff 46%,  #647eff 54%,transparent 54%, transparent 100%)}
+.member li .delete span {display:none}
+.errored, .loading, .nodata {text-align:center;padding:20px 0;min-height:300px;opacity:.7}
+
+
+/* body:before {content:'';position:fixed;top:0;right:0;bottom:0;left:0;background:var(--gradient-color5);z-index:-1} */
+
+#content:before {content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:rgba( 255, 255, 255, 0.1);transform: skewY(-8deg);z-index:-1}
+h2.title {font-size:50px;font-weight:900;color:#fff;text-align:center;margin:20px 0;line-height:1.2}
+.btn_center {text-align:center;margin:25px 0;}
+.btn_basic {display:inline-block;height:40px;min-width:120px;line-height:38px;margin:0 5px;padding:0 20px;border:1px solid #fff;background:none;cursor:pointer;transition:background-color .5s ease;}
+.btn_basic:hover {background:rgba( 255, 255, 255, 0.2);}
+
+
+
+.spinner {animation:rotate 2s linear infinite;z-index:2;position:absolute;top:50%;left:50%;margin:-14px 0 0 -14px;width:28px;height:28px;opacity:.6}
+.spinner .path {stroke:#fff;stroke-width:7px;stroke-linecap:round;animation:dash 1.5s ease-in-out infinite;}
+@keyframes rotate { 
+  100% {transform: rotate(360deg);}
+}
+@keyframes dash { 
+  0% {stroke-dasharray: 1, 150;stroke-dashoffset: 0;}
+  50% {stroke-dasharray: 90, 150;stroke-dashoffset: -35;}
+  100% {stroke-dasharray: 90, 150;stroke-dashoffset: -124;}
+}
