@@ -1,4 +1,10 @@
 # vue-login-pinia
+vue pinia 로그인
+- vue (ver3)
+- pinia
+- axios
+- json-server-auth
+- vue-router
 
 ## Project setup
 ```
